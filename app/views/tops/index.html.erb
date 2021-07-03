@@ -1,0 +1,11 @@
+<h1>おうち時間</h1>
+<p>当サイトは自宅での遊びや趣味を共有するコミュニティサイトです。</p>
+<p>自宅での過ごし方をみんなで共有し楽しい時間を増やしましょう。</p>
+
+<% if user_signed_in? %>
+  <%= link_to "投稿一覧ページへ", posts_path %>
+  <%= link_to "新規投稿する", new_post_path %>
+<% else %>
+  <%= link_to "ログイン", new_user_session_path %>
+  <%= link_to "アカウント新規登録", new_user_registration_path %>
+<% end %>
