@@ -1,7 +1,7 @@
 <div>
   <p>【投稿者】 <%= post.user.username %></p>
   <p>【タイトル】 <%= post.title %></p>
-  <p>
+  <p id="post-<%= post.id %>">
     <% if post.liked_by?(current_user) %>
       <%= render "like", post: post %>
     <% else %>
