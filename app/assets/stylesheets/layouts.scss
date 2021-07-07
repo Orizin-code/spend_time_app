@@ -1,3 +1,4 @@
+// header
 .header-right {
   padding-right: 5px;
   position: fixed;
@@ -30,4 +31,33 @@
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #333333;
+}
+
+.header-signup {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  opacity: 0.8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333333;
+}
+
+.header-login {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  opacity: 0.8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333333;
+}
+
+// footer
+.footer-wrapper {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(125, 224, 139);
 }

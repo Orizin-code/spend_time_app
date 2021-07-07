@@ -1,11 +1,16 @@
-<h2>パスワードを変更する</h2>
+<h2>アカウント編集</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <div class="form-title">新しい名前または現在の名前<span class="required_content"></span></div>
+      <%= f.text_field :username, placeholder: "名前入力(16文字以内)",required: true, maxlength:"16" %>
+    </div>
+  </div>
 
   <div class="field">
     <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, placeholder: "@example.com", autofocus: true, autocomplete: "email" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -13,17 +18,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :新しいパスワード %> <br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> 文字以上</em>
-    <% end %>
+    <a><%= f.label :新しいパスワード %>(※パスワードの変更をしない場合は入力不要)</a><br />
+    <%= f.password_field :password, placeholder: "6文字以上", autocomplete: "new-password" %>
+
   </div>
 
   <div class="field">
     <%= f.label :パスワード確認 %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, placeholder: "6文字以上", autocomplete: "new-password" %>
   </div>
 
   <div class="field">
@@ -36,10 +38,11 @@
   </div>
 <% end %>
 <br>
-<%= link_to "戻る", :back %>
+
+<%= link_to "戻る", mypage_path(current_user) %>
 
 <h3>アカウント削除</h3>
 
-<p>アカウントを削除する場合は <%= button_to "こちら", registration_path(resource_name), data: { confirm: "アカウントは元に戻せません。削除しますか?" }, method: :delete %></p>
+<a>アカウントを削除する場合は <%= button_to "こちら", registration_path(resource_name), data: { confirm: "アカウントは元に戻せません。削除しますか?" }, method: :delete %></a>
 
 
