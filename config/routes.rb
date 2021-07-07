@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :posts do
     resource :likes, only: [:create, :destroy]
   end
+  resources :tops, only: %i[index edit update]
+  get "/mypage/:id", to: "tops#show", as: "mypage"
 end
