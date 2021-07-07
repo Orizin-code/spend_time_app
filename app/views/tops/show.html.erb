@@ -1,1 +1,15 @@
-<h1>マイページ</h1>
+<div class="all-warapper">
+  <div class="top-container">
+    <div class="top-wrapper">
+      <h1>マイページ</h1>
+    </div>
+  </div>
+  <div class="menu-wrapper">
+    <p class="username"><%= "ユーザー名：#{current_user.username}" %></p>
+    <div class="btn-wrapper">
+      <a><%= link_to "アカウント編集", edit_user_registration_path, class:"edit" %></a><br>
+      <br><a><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout" %></a><br>
+      <br><a><%= link_to "戻る", posts_path, class:"back" %></a>
+    </div>
+  </div>
+</div>
