@@ -1,11 +1,31 @@
-<h1>おうち時間</h1>
-<p>当サイトは自宅での遊びや趣味を共有するコミュニティサイトです。</p>
-<p>自宅での過ごし方をみんなで共有し楽しい時間を増やしましょう。</p>
-
-<% if user_signed_in? %>
-  <%= link_to "投稿一覧ページへ", posts_path %>
-  <%= link_to "新規投稿する", new_post_path %>
-<% else %>
-  <%= link_to "ログイン", new_user_session_path %>
-  <%= link_to "アカウント新規登録", new_user_registration_path %>
-<% end %>
+<body>
+  <header>
+  <!-- layouts/_header.html.erbファイルに記入 -->
+  </header>
+  <div class="all-warapper">
+    <div class="top-container">
+      <div class="top-wrapper">
+        <h2>〜〜おうち時間〜〜</h2>
+      </div>
+    </div>
+    <div class="message-wrapper">
+      <p>当サイトは自宅での遊びや趣味を共有するコミュニティサイトです。
+      <br>自宅での過ごし方をみんなで共有し楽しい時間を増やしましょう。</p>
+      <p>〜〜〜〜〜〜〜〜ご利用の方はこちら〜〜〜〜〜〜〜〜〜</p>
+      <div class="btn-wrapper">
+        <% if user_signed_in? %>
+          <%# ログイン済みの表示 %>
+          <a><%= link_to "投稿一覧ページへ", posts_path, class:"list" %></a>
+          <a><%= link_to "新規投稿する", new_post_path, class:"post" %></a>
+        <% else %>
+          <%# 非ログイン時の表示 %>
+          <a><%= link_to "ログイン", new_user_session_path, class:"login" %></a>
+          <a><%= link_to "新規登録", new_user_registration_path, class:"signup" %></a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <!-- layouts/_footer.html.erbファイルに記入 -->
+  </footer>
+</body>
