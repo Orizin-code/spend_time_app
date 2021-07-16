@@ -27,6 +27,8 @@ gem "jbuilder", "~> 2.7"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
+# 管理者画面
+gem 'activeadmin'
 # ログイン機能
 gem "devise"
 # 日本語化

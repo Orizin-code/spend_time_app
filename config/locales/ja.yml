@@ -1,4 +1,13 @@
 ja:
+  attributes:
+    id: ID
+    namespace: 名前空間
+    resource_type: リソースタイプ
+    resource_id: リソースID
+    author_type: 著者タイプ
+    author_id: 著者ID
+    created_at: 作成日時
+    updated_at: 更新日時
   activerecord:
     models:
       post: 投稿
@@ -14,3 +23,10 @@ ja:
   time:
     formats:
       default: '%Y年%-m月%-d日(%a) %-H時%-M分%-S秒'
+  views:
+    pagination:
+      first: '最初'
+      last: '最後'
+      previous: '前のページへ'
+      next: '次のページへ'
+      truncate: '...'
