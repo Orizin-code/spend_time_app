@@ -1,3 +1,12 @@
 <h1>投稿一覧</h1>
+<h3>キーワードを検索する</h3>
+<%= search_form_for @q do |f| %>
+  <%= f.label :title_cont, "タイトル" %>
+  <%= f.search_field :title_cont %>
+  <%= f.label :content_cont, "内容" %>
+  <%= f.search_field :content_cont %>
+  <%= f.submit "検索" %>
+<% end %>
+<p><%= link_to "検索をクリア", posts_path %></p>
 <%= render @posts %>
 <%= paginate @posts %>
