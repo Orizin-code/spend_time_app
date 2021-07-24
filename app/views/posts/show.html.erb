@@ -1,3 +1,4 @@
+<!-- 投稿内容 -->
 <h1>投稿詳細</h1>
 <p>【名前】 <%= @post.user.username %></p>
 <p>【タイトル】 <%= @post.title %></p>
@@ -10,10 +11,33 @@
     <%= render "dislike", post: @post %>
   <% end %>
 </p>
+
+<!-- 投稿編集と削除 -->
 <% if current_user.id == @post.user_id %>
   <p>
     <%= link_to "編集", edit_post_path(@post) %>
     <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" } %>
   </p>
 <% end %>
-<p><%= link_to "戻る", posts_path %></p>
+<p><%= link_to "投稿一覧へ", posts_path %></p>
+
+<!-- コメント一覧 -->
+<div class="row">
+  <% if user_signed_in? %>
+    <div class="comment-create">
+      <h3 class="text-left">レビューを投稿する</h3>
+      <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+    </div>
+  <% end %>
+  <hr>
+  <ul>
+    <li class="comment-create">
+      <h3 class="text-left title">レビュー</h3>
+    </li>
+    <li id="comments_area">
+      <%= render partial: 'comments/index', locals: { comments: @comments } %>
+    </li>
+  </ul>
+</div>
+
+<p><%= link_to "投稿一覧へ", posts_path %></p>
