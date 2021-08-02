@@ -1,13 +1,15 @@
+// 投稿一覧ページ
 .list-top {
   text-align: center;
-  padding: 15px;
+  padding: 7px 0 20px 0;
+  border-bottom: solid 1px black;
 }
 
 .list-seach {
-  border-top: solid 1px black;
+  border-top: solid 1px #121213;
   border-left: solid 6px #121213;
-  padding-left: 28px;
-  padding-bottom: 10px;
+  border-right: solid 6px #121213;
+  padding: 7px 0 10px 28px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
   margin-bottom: 15px;
 }
@@ -15,9 +17,14 @@
 .user-post {
   padding: 1px;
   padding-left: 20px;
-  border-top: solid 1px black;
   border-left: solid 6px #266dc9;
+  border-bottom: double 8px rgb(202, 201, 201);
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}
+
+.post-title {
+  font-size: large;
+  font-weight: 600;
 }
 
 .post-btn :hover {
@@ -102,4 +109,41 @@
   border: 1px solid #333333;
   cursor: pointer;
   box-shadow: 3px 5px rgb(41, 41, 248);
+}
+
+// 投稿詳細ページ
+.detail-wrapper {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  border-left: solid 6px #266dc9;
+  border-bottom: double 8px rgb(202, 201, 201);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}
+
+.text-comments {
+  text-align: center;
+  border-bottom: solid 1px black;
+  padding-bottom: 15px;
+}
+
+.comment-create {
+  padding: 5px 0 10px 15px;
+  border-left: solid 6px #5bb7ae;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}
+
+.back-list :hover {
+  opacity: 1;
+  background-color: rgb(58, 58, 58);
+  color: white;
+}
+
+.back-btn {
+  color: rgb(247, 7, 7);
+  background-color: #f1f7f5;
+  border-radius: 5px;
+  opacity: 0.8;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid #333333;
+  cursor: pointer;
 }
