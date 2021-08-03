@@ -13,3 +13,249 @@
  *= require_tree .
  *= require_self
  */
+
+.submit-btn {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 12pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 7px 10px;
+  background: #000066;
+  color: #ffffff;
+  line-height: 1em;
+  transition: 0.3s;
+  box-shadow: 3px 3px 2px #666666;
+  border: 2px solid #000066;
+}
+
+.submit-btn:hover {
+  box-shadow: none;
+  color: #000066;
+  background: #ffffff;
+}
+
+// スマホ用
+@media (max-width: 767px) {
+  // tops/index.html
+  .all-warapper {
+    height: 500px;
+  }
+
+  h1 {
+    font-size: 18px;
+    padding-top: 5px;
+  }
+
+  .top-title {
+    margin-top: 32px;
+  }
+
+  .top-title:after {
+    top: 53px;
+    width: 100px;
+    height: 40px;
+  }
+
+  .message-wrapper {
+    height: 79%;
+  }
+
+  .message-wrapper p {
+    font-size: 17px;
+  }
+
+  .btn-wrapper {
+    :active {
+      top: 4px;
+      left: 2px;
+    }
+  }
+
+  .list {
+    padding: 7px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .post {
+    padding: 7px;
+    margin-left: 5%;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .login {
+    padding: 7px;
+    margin-right: 1%;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .signup {
+    padding: 7px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .guest {
+    padding: 7px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .btn-wrapper {
+    font-size: 13px;
+  }
+
+  // tops/show.html
+  .username {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 18px;
+  }
+
+  .menu-wrapper {
+    height: 79%;
+  }
+
+  .menu-wrapper p {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  .mypage-btn {
+    font-size: 13px;
+  }
+
+  .edit {
+    padding: 6px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .logout {
+    padding: 6px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .back {
+    padding: 6px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  //posts/show
+  .content-title {
+    margin-top: 35px;
+  }
+
+  .content-title:after {
+    top: 60px;
+    width: 100px;
+    height: 40px;
+  }
+
+  .area-field {
+    width: 80%;
+  }
+
+  // header
+  .header-right {
+    font-size: 11px;
+    right: 2%;
+  }
+
+  // footer
+  .footer-wrapper {
+    height: 20px;
+  }
+
+  .footer-wrapper h4 {
+    font-size: 11px;
+    width: 90%;
+    bottom: 1em;
+    right: 32%;
+  }
+}
+
+// タブレット用
+@media (min-width: 768px) and (max-width: 1024px) {
+  // TOP-PAGE
+  .all-warapper {
+    height: 570px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .top-title {
+    margin-top: 34px;
+  }
+
+  .top-title:after {
+    top: 57px;
+    width: 130px;
+    height: 50px;
+  }
+
+  .message-wrapper {
+    height: 79%;
+  }
+
+  .message-wrapper p {
+    font-size: 22px;
+  }
+
+  .btn-wrapper {
+    font-size: 20px;
+    margin-right: 7%;
+  }
+
+  //MyPage
+  .username {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 26px;
+  }
+
+  .mypage-btn {
+    font-size: 20px;
+  }
+
+  .menu-wrapper {
+    height: 79%;
+  }
+
+  .menu-wrapper p {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+
+  .menu-wrapper p {
+    margin-top: 35px;
+    font-size: 26px;
+  }
+
+  //posts/show
+  .content-title {
+    margin-top: 40px;
+  }
+
+  .content-title:after {
+    top: 68px;
+    width: 110px;
+    height: 45px;
+  }
+
+  // header
+  .header-right {
+    font-size: 15px;
+  }
+
+  // footer
+  .footer-wrapper {
+    height: 23px;
+  }
+
+  .footer-wrapper h4 {
+    font-size: 15px;
+    width: 60%;
+    bottom: 1em;
+    right: 10%;
+  }
+}

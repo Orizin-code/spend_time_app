@@ -1,25 +1,49 @@
 // tops/index.html.erb
 .all-warapper {
-  width: 100%;
-  height: 575px;
-  margin: 0 auto;
+  height: 640px;
+  margin: auto;
   text-align: center;
 }
 
 .top-title {
-  border-bottom: solid 2px black;
-  color: rgb(51, 50, 50);
+  text-align: center;
+  font-family: fantasy;
+  border-top: double 7px rgb(6, 143, 6);
+  border-bottom: double 7px rgb(6, 143, 6);
+  padding-bottom: 5px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  color: #158b2b;
+  background-color: rgb(234, 255, 228);
+}
+
+.top-title:after {
+  content: '';
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  width: 150px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid #a6ddb0;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .message-wrapper {
   height: 498px;
-  background-image: url(https://cdn.pixabay.com/photo/2020/04/09/02/13/stay-at-home-5019352__480.jpg);
   opacity: 0.9;
-  background-size: contain;
   padding-top: 5px;
+  background-image: url('https://cdn.pixabay.com/photo/2020/04/09/02/13/stay-at-home-5019352__480.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 10;
 }
 
 .message-wrapper p {
+  margin-top: 60px;
   color: white;
   font-size: 30px;
   text-shadow: 1px 0 5px black;
@@ -32,7 +56,8 @@
 
 .btn-wrapper {
   padding: 50px 0 100px 0;
-  font-size: 30px;
+  margin-right: 5%;
+  font-size: 25px;
   letter-spacing: 5px;
   :active {
     box-shadow: none;
@@ -60,9 +85,7 @@
   text-shadow: 1px 0 5px black;
   border-radius: 5px;
   opacity: 0.8;
-  margin-right: 50px;
-  margin-right: 20px;
-  margin-left: 80px;
+  margin-left: 10%;
   padding: 10px;
   border: 1px solid #333333;
   cursor: pointer;
@@ -112,10 +135,11 @@
 // tops/show.html.erb
 .menu-wrapper {
   height: 498px;
-  background-image: url(https://cdn.pixabay.com/photo/2020/04/09/02/13/stay-at-home-5019352__480.jpg);
   opacity: 0.9;
   padding-top: 5px;
-  background-size: contain;
+  background-image: url('https://cdn.pixabay.com/photo/2020/04/09/02/13/stay-at-home-5019352__480.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .menu-wrapper p {
@@ -128,6 +152,26 @@
   color: white;
   font-size: 30px;
   text-shadow: 1px 0 5px black;
+  background: linear-gradient(transparent 70%, rgb(5, 82, 82) 70%);
+  width: 80%;
+  margin-left: 10%;
+}
+
+.mypage-btn :hover {
+  opacity: 1;
+  background-color: #039203;
+}
+
+.mypage-btn {
+  padding: 50px 0 100px 0;
+  font-size: 25px;
+  letter-spacing: 5px;
+  :active {
+    box-shadow: none;
+    position: relative;
+    top: 7px;
+    left: 5px;
+  }
 }
 
 .edit {
