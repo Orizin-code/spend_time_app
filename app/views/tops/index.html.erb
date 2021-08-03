@@ -3,25 +3,27 @@
   <!-- layouts/_header.html.erbファイルに記入 -->
   </header>
   <div class="all-warapper">
-    <div class="top-container">
-      <div class="top-title">
-        <h1>おうち時間〜spendtime〜</h1>
-      </div>
+    <div class="top-title">
+      <h1>おうち時間〜spendtime〜</h1>
     </div>
-    <div class="message-wrapper">
+    <div class="message-wrapper">      
       <p>当サイトは自宅での遊びや趣味を共有するコミュニティサイトです。
       <br>自宅での過ごし方をみんなで共有し楽しい時間を増やしましょう。</p>
-      <p>〜〜〜〜〜〜〜〜ご利用の方はこちら〜〜〜〜〜〜〜〜〜</p>
+      <p>〜〜ご利用の方はこちら〜〜</p>
       <div class="btn-wrapper">
         <% if user_signed_in? %>
           <%# ログイン済みの表示 %>
-          <a><%= link_to "投稿一覧ページへ", posts_path, class:"list" %></a>
-          <a><%= link_to "新規投稿する", new_post_path, class:"post" %></a>
+          <a class="link-btn">
+            <%= link_to "投稿一覧ページ", posts_path, class:"list" %>
+            <%= link_to "新規投稿", new_post_path, class:"post" %>
+          </a>
         <% else %>
           <%# 非ログイン時の表示 %>
-          <a><%= link_to "ログイン", new_user_session_path, class:"login" %></a>
-          <a><%= link_to "新規登録", new_user_registration_path, class:"signup" %></a><br>
-          <br><a><%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class:"guest" %></a>
+          <a class="link-btn">
+            <%= link_to "ログイン", new_user_session_path, class:"login" %>
+            <%= link_to "新規登録", new_user_registration_path, class:"signup" %><br>
+            <br><%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class:"guest" %>
+          </a>
         <% end %>
       </div>
     </div>
