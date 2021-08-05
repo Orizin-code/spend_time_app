@@ -9,21 +9,7 @@
   margin-bottom: 12px;
   color: #158b2b;
   background-color: rgb(234, 255, 228);
-}
-
-.content-title:after {
-  content: '';
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  width: 150px;
-  height: 70px;
-  border-radius: 50%;
-  border: 5px solid #a6ddb0;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  box-shadow: 0 4px 8px 0 #1a7940;
 }
 
 .list-seach {

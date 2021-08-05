@@ -3,7 +3,7 @@
     <h1>---マイページ---</h1>
   </div>
   <div class="menu-wrapper">
-    <h5 class="username"><%= "#{current_user.username}さん" %></h5>
+    <p class="username"><%= "ー #{current_user.username}さん ー" %></p>
     <div class="mypage-btn">
       <a><%= link_to "アカウント編集", edit_user_registration_path, class:"edit" %></a><br>
       <br><a><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout" %></a><br>
