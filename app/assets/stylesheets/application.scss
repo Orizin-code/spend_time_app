@@ -47,25 +47,35 @@
 @media (max-width: 767px) {
   // tops/index.html
   .all-warapper {
-    height: 500px;
-  }
-
-  h1 {
-    font-size: 18px;
-    padding-top: 5px;
+    height: 850px;
   }
 
   .top-title {
+    height: 100px;
+    padding-top: 40px;
     margin-top: 32px;
-    box-shadow: 2px 4px #1a7940;
+    box-shadow: 0 4px 8px 0 #1a7940;
   }
 
-  .message-wrapper {
-    height: 79%;
+  .title-text {
+    font-size: 20px;
+  }
+
+  .message-title {
+    font-size: 20px;
   }
 
   .message-wrapper p {
-    font-size: 17px;
+    font-size: 15px;
+  }
+
+  .menu-select {
+    padding-top: 50px;
+    height: 30%;
+  }
+
+  .menu-select-title {
+    font-size: 15px;
   }
 
   .btn-wrapper {
@@ -112,14 +122,26 @@
     text-align: left;
   }
 
-  // tops/show.html
+  .infomation-container {
+    font-size: 15px;
+  }
 
-  .menu-wrapper {
-    height: 79%;
+  .infomation-text {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  // tops/show.html
+  h1 {
+    font-size: 20px;
+  }
+
+  .mypage-all-warapper {
+    height: 600px;
   }
 
   .menu-wrapper p {
-    margin-top: 65px;
+    margin-top: 45px;
     font-size: 16px;
   }
 
@@ -153,6 +175,7 @@
 
   // posts/show.html
   .content-title {
+    font-size: 20px;
     margin-top: 35px;
     box-shadow: 0 4px 8px 0 #1a7940;
   }
@@ -185,6 +208,12 @@
     margin: 0 0 5% 0;
   }
 
+  // shared/_error_messages.html
+  .error_title {
+    font-size: 15px;
+    color: red;
+  }
+
   // registrations/edit.html
   .field {
     font-size: 15px;
@@ -214,7 +243,6 @@
   // footer
   .footer-wrapper {
     height: 20px;
-    box-shadow: 2px 4px #1a7940;
   }
 
   .footer-wrapper h4 {
@@ -228,27 +256,18 @@
 // タブレット用
 @media (min-width: 768px) and (max-width: 1024px) {
   // tops/index.html
-  .all-warapper {
-    height: 1150px;
-  }
-
   h1 {
     font-size: 30px;
   }
 
   .top-title {
     margin-top: 34px;
-    padding-top: 10px;
+    padding: 80px 0 0 0;
     box-shadow: 0 4px 8px 0 #1a7940;
   }
 
-  .message-wrapper {
-    height: 86%;
-  }
-
   .message-wrapper p {
-    font-size: 25px;
-    margin-top: 15%;
+    margin-top: 60px;
   }
 
   .btn-wrapper {
@@ -260,19 +279,17 @@
     text-align: left;
   }
 
+  .infomation-text {
+    margin-top: 200px;
+  }
+
   // tops/show.html
   .mypage-btn {
     font-size: 25px;
   }
 
-  .menu-wrapper {
-    height: 86%;
-  }
-
   .menu-wrapper p {
-    margin-top: 170px;
-    margin-bottom: 80px;
-    font-size: 27px;
+    margin-top: 50px;
   }
 
   // posts/index.html
@@ -364,7 +381,6 @@
   // footer
   .footer-wrapper {
     height: 30px;
-    box-shadow: 0 4px 8px 0 #1a7940;
   }
 
   .footer-wrapper h4 {
