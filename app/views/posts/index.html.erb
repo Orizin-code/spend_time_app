@@ -10,5 +10,7 @@
     <p class="seach-clear"><%= link_to "検索をクリア", posts_path, class:"seach-btn" %></p>
   </div>
   <%= render @posts %>
-  <%= paginate @posts %>
+  <div class="paginate-btn">
+    <%= paginate @posts %>
+  </div>
 </div>

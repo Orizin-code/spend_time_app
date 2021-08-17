@@ -142,6 +142,24 @@
   box-shadow: 3px 5px rgb(41, 41, 248);
 }
 
+.like-btn {
+  color: white;
+  background-color: blue;
+  box-shadow: 0 1px 4px 0 rgb(41, 41, 248);
+  text-shadow: 1px 0 2px black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dislike-btn {
+  color: black;
+}
+
+.paginate-btn {
+  text-align: center;
+  color: blue;
+}
+
 // 新規投稿ページ
 .area-field {
   resize: none;
