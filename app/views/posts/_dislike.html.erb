@@ -1,2 +1,2 @@
-<%= link_to "いいね☆", post_likes_path(post), method: :post, remote: true %>
+<%= link_to "いいね!", post_likes_path(post), method: :post, remote: true, class: "dislike-btn" %>
 <%= post.likes_count %>
