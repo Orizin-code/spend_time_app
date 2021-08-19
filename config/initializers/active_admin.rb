@@ -332,4 +332,6 @@ ActiveAdmin.setup do |config|
   # You can switch to using Webpacker here.
   #
   # config.use_webpacker = true
+
+  config.comments_registration_name = "AdminComment"
 end
