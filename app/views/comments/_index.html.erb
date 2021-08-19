@@ -2,20 +2,14 @@
 <a class="comment-count">コメント数<%= comments.count %>件</a>
 <% comments.each do |comment| %>
   <% unless comment.id.nil? %>
-    <div class="comment-container">
-      <div class="comment-box">           
-        <div class="comment-text">
-          <p> <%= comment.user.username %> <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
-          <div class="comment-entry">
-            <%= simple_format(h comment.content) %>
-            <% if comment.user == current_user %>
-              <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
-                <i class="fas fa-trash" style="color: black;"></i>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
-      </div>
+    <div class="comment-box">           
+      <p> <%= comment.user.username %> <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
+      <%= simple_format(h comment.content) %>
+      <% if comment.user == current_user %>
+        <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
+          <i class="fas fa-trash" style="color: black;"></i>
+        <% end %>
+      <% end %>
     </div>
   <% end %>
 <% end %>
