@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[edit update destroy]
 
   # 1ページの表示数
-  PER_PAGE = 10
+  PER_PAGE = 5 
 
   def index
     @q = Post.ransack(params[:q])
