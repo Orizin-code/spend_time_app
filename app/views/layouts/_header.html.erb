@@ -3,6 +3,7 @@
     <div class="header-right">
       <% if user_signed_in? %>
         <%= link_to "TOPへ", root_path, class:"header-top" %>
+        <%= link_to "投稿", new_post_path, class:"header-post" %>
         <%= link_to "マイページ", mypage_path(current_user), class:"header-mypage" %>
       <% else %>
         <%= link_to "TOPへ", root_path, class:"header-top" %>
