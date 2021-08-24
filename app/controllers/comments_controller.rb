@@ -1,17 +1,17 @@
 class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
-    # 投稿に紐づいたコメントを作成
     @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
     @comment.save
-    redirect_to @post
+    redirect_to @post, notice: "コメントを書き込みました。"
   end
 
   def destroy
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to @post
+    redirect_to @post, notice: "コメントを削除しました。"
   end
 
   private

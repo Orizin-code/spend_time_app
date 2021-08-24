@@ -2,8 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: %i[edit update destroy]
 
-  # 1ページの表示数
-  PER_PAGE = 5 
+  PER_PAGE = 5
 
   def index
     @q = Post.ransack(params[:q])
@@ -22,7 +21,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
-    # 新着順で表示
     @comments = @post.comments.order(created_at: :desc)
   end
 
