@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   # バリデーション
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
-  validates :username, presence: true, length: { in: 1..16, allow_blank: true }, uniqueness: { case_sensitive: true }
+  validates :username, presence: true, length: { in: 1..25, allow_blank: true }, uniqueness: { case_sensitive: true }
   validates :email,
             presence: true,
             uniqueness: true,
