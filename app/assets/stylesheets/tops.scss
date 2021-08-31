@@ -1,0 +1,223 @@
+// tops/index.html.erb
+.all-warapper {
+  height: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.top-title {
+  height: 200px;
+  text-align: center;
+  font-family: fantasy;
+  padding: 80px 0 5px 0;
+  margin: 40px 0 5px 0;
+  color: #158b2b;
+  background-color: rgb(234, 255, 228);
+  box-shadow: 0 4px 8px 0 #1a7940;
+}
+
+.title-text {
+  text-shadow: 1px 0 1px black;
+  font-size: 35px;
+}
+
+.message-wrapper {
+  height: 498px;
+  opacity: 0.9;
+  padding-top: 80px;
+  z-index: 10;
+}
+
+.message-title {
+  border-bottom: solid 5px red;
+  font-size: 30px;
+  text-shadow: 1px 0 5px rgb(209, 208, 208);
+}
+
+.message-wrapper p {
+  margin-top: 60px;
+  color: black;
+  font-size: 25px;
+  text-shadow: 1px 0 5px rgb(209, 208, 208);
+}
+
+.menu-select {
+  padding-top: 100px;
+  height: 50%;
+  background-color: rgb(14, 14, 255);
+  box-shadow: 0 4px 8px 0 blue;
+}
+
+.menu-select-title {
+  color: white;
+  text-shadow: 1px 0 5px rgb(129, 129, 129);
+  font-size: 25px;
+}
+
+.btn-wrapper {
+  padding: 50px 0 100px 0;
+  margin-right: 5%;
+  font-size: 25px;
+  letter-spacing: 5px;
+  :active {
+    box-shadow: none;
+    position: relative;
+    top: 7px;
+    left: 5px;
+  }
+}
+
+.btn-wrapper :hover {
+  background-color: #039203;
+}
+
+.list {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #333333;
+  cursor: pointer;
+  box-shadow: 5px 7px #1a7940;
+}
+
+.post {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  margin-left: 10%;
+  padding: 10px;
+  border: 1px solid #333333;
+  cursor: pointer;
+  box-shadow: 5px 7px #1a7940;
+}
+
+.login {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  border: 1px solid #333333;
+  cursor: pointer;
+  box-shadow: 5px 7px #1a7940;
+}
+
+.signup {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  margin-left: 10%;
+  padding: 10px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 5px 7px #1a7940;
+}
+
+.guest {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 5%;
+  border: 1px solid #333333;
+  cursor: pointer;
+  box-shadow: 5px 7px #1a7940;
+}
+
+.infomation-container {
+  font-size: 22px;
+  padding-top: 20px;
+  border-bottom: solid 1px gray;
+}
+
+.infomation-text {
+  margin-top: 200px;
+  font-size: 20px;
+}
+
+// tops/show.html.erb
+.mypage-all-warapper {
+  height: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+.menu-wrapper {
+  opacity: 0.9;
+  padding-top: 5px;
+}
+
+.menu-wrapper p {
+  color: black;
+  font-size: 30px;
+  text-shadow: 1px 0 5px gray;
+  margin-top: 65px;
+  margin-left: 10%;
+  border-bottom: double 10px blue;
+}
+
+.username {
+  width: 80%;
+}
+
+.mypage-btn :hover {
+  opacity: 1;
+  background-color: #039203;
+}
+
+.mypage-btn {
+  padding: 80px 0 100px 0;
+  margin-left: 10%;
+  width: 80%;
+  font-size: 25px;
+  letter-spacing: 5px;
+  background-color: rgb(235, 235, 235);
+  box-shadow: 5px 7px rgb(118, 118, 119);
+  :active {
+    box-shadow: none;
+    position: relative;
+    top: 7px;
+    left: 5px;
+  }
+}
+
+.edit {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #333333;
+  cursor: pointer;
+  box-shadow: 5px 7px #1a7940;
+}
+
+.logout {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #333333;
+  cursor: pointer;
+  box-shadow: 5px 7px #1a7940;
+}
+
+.back {
+  color: white;
+  background-color: #4ca084;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #333333;
+  cursor: pointer;
+  box-shadow: 5px 7px #1a7940;
+}

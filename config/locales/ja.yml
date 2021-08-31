@@ -1,0 +1,32 @@
+ja:
+  attributes:
+    id: ID
+    namespace: 名前空間
+    resource_type: リソースタイプ
+    resource_id: リソースID
+    author_type: 著者タイプ
+    author_id: 著者ID
+    created_at: 作成日時
+    updated_at: 更新日時
+  activerecord:
+    models:
+      post: 投稿
+      like: いいね
+    attributes:
+      post:
+        title: タイトル
+        content: 内容
+        user: ユーザー
+      like:
+        user: ユーザー
+        post: 投稿
+  time:
+    formats:
+      default: '%Y年%-m月%-d日(%a) %-H時%-M分%-S秒'
+  views:
+    pagination:
+      first: '最初'
+      last: '最後'
+      previous: '前へ'
+      next: '次へ'
+      truncate: '...'

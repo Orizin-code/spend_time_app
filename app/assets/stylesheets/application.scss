@@ -1,0 +1,424 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.submit-btn {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 12pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 7px 10px;
+  background: #000066;
+  color: #ffffff;
+  line-height: 1em;
+  transition: 0.3s;
+  box-shadow: 3px 3px 2px #666666;
+  border: 2px solid #000066;
+}
+
+.submit-btn:hover {
+  box-shadow: none;
+  color: #000066;
+  background: #ffffff;
+}
+
+.flash-msg {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  text-shadow: 1px 0 5px black;
+  padding: 20px;
+  background-color: blue;
+  box-shadow: 0 4px 8px 0 #626262;
+}
+
+// kaminari
+.paginate-btn {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.current {
+  color: blue;
+
+  margin: 0 5px 0 5px;
+  text-shadow: 1px 0 6px green;
+}
+
+.pages-btn :hover {
+  opacity: 1;
+  background-color: rgb(60, 60, 253);
+  transition: 0.3s;
+}
+
+.pages {
+  color: white;
+  background-color: #6da7ff;
+  padding: 5px 5px;
+  text-shadow: 1px 0 5px black;
+  border-radius: 5px;
+  opacity: 0.8;
+  border: 1px solid #333333;
+  cursor: pointer;
+}
+
+// スマホ用
+@media (max-width: 767px) {
+  // tops/index.html
+  .all-warapper {
+    height: 850px;
+  }
+
+  .top-title {
+    height: 100px;
+    padding-top: 40px;
+    margin-top: 32px;
+    box-shadow: 0 4px 8px 0 #1a7940;
+  }
+
+  .title-text {
+    font-size: 20px;
+  }
+
+  .message-title {
+    font-size: 20px;
+  }
+
+  .message-wrapper p {
+    font-size: 15px;
+  }
+
+  .menu-select {
+    padding-top: 50px;
+    height: 30%;
+  }
+
+  .menu-select-title {
+    font-size: 15px;
+  }
+
+  .btn-wrapper {
+    :active {
+      top: 4px;
+      left: 2px;
+    }
+  }
+
+  .list {
+    padding: 7px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .post {
+    padding: 7px;
+    margin-left: 5%;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .login {
+    padding: 7px;
+    margin-right: 1%;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .signup {
+    padding: 7px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .guest {
+    padding: 7px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .btn-wrapper {
+    font-size: 13px;
+  }
+
+  .flash-msg {
+    font-size: 10px;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .infomation-container {
+    font-size: 15px;
+  }
+
+  .infomation-text {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  // tops/show.html
+  h1 {
+    font-size: 20px;
+  }
+
+  .mypage-all-warapper {
+    height: 600px;
+  }
+
+  .menu-wrapper p {
+    margin-top: 45px;
+    font-size: 16px;
+  }
+
+  .mypage-btn {
+    font-size: 13px;
+  }
+
+  .edit {
+    padding: 6px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .logout {
+    padding: 6px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  .back {
+    padding: 6px;
+    box-shadow: 2px 4px #1a7940;
+  }
+
+  // posts/index.html
+  .list-seach {
+    margin: 0 0 5% 0;
+  }
+
+  .user-post {
+    margin: 0;
+  }
+
+  // posts/show.html
+  .content-title {
+    font-size: 20px;
+    margin-top: 35px;
+    box-shadow: 0 4px 8px 0 #1a7940;
+  }
+
+  .content-title:after {
+    top: 60px;
+    width: 100px;
+    height: 40px;
+  }
+
+  .move-btn {
+    margin: 0;
+  }
+
+  .comment-create {
+    margin: 0 0 5% 0;
+  }
+
+  .area-field {
+    width: 80%;
+  }
+
+  // comments/_form.html
+  .comment-count {
+    margin: 0;
+  }
+
+  // comments/_index.html
+  .comment-box {
+    margin: 0 0 5% 0;
+  }
+
+  // shared/_error_messages.html
+  .error_title {
+    font-size: 15px;
+    color: red;
+  }
+
+  // registrations/edit.html
+  .field {
+    font-size: 15px;
+    width: 90%;
+    margin: 0 0 15px 0;
+  }
+  .input-field {
+    width: 80%;
+  }
+
+  .acount-delete {
+    font-size: 20px;
+    padding: 0 50px;
+  }
+
+  .acount-delete:before,
+  .acount-delete:after {
+    width: 10%;
+  }
+
+  // header
+  .header-right {
+    font-size: 11px;
+    right: 2%;
+  }
+
+  // footer
+  .footer-wrapper {
+    height: 20px;
+  }
+
+  .footer-wrapper h4 {
+    font-size: 11px;
+    width: 100%;
+    bottom: 1em;
+    right: 38%;
+  }
+}
+
+// タブレット用
+@media (min-width: 768px) and (max-width: 1024px) {
+  // tops/index.html
+  h1 {
+    font-size: 30px;
+  }
+
+  .top-title {
+    margin-top: 34px;
+    padding: 80px 0 0 0;
+    box-shadow: 0 4px 8px 0 #1a7940;
+  }
+
+  .message-wrapper p {
+    margin-top: 60px;
+  }
+
+  .btn-wrapper {
+    font-size: 25px;
+    margin-right: 7%;
+  }
+
+  .flash-msg {
+    text-align: left;
+  }
+
+  .infomation-text {
+    margin-top: 200px;
+  }
+
+  // tops/show.html
+  .mypage-btn {
+    font-size: 25px;
+  }
+
+  .menu-wrapper p {
+    margin-top: 50px;
+  }
+
+  // posts/index.html
+  .content-title {
+    margin-top: 50px;
+    padding-top: 30px;
+    box-shadow: 0 4px 8px 0 #1a7940;
+  }
+
+  .list-seach {
+    font-size: 15px;
+  }
+
+  .keyword {
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
+  }
+
+  .user-post {
+    font-size: 15px;
+  }
+
+  // posts/show.html
+  .post-title {
+    font-size: 18px;
+  }
+
+  .move-btn {
+    font-size: 17px;
+  }
+
+  .comment-create {
+    font-size: 15px;
+  }
+
+  .area-field {
+    font-size: 15px;
+  }
+  .text-comments {
+    font-size: 23px;
+  }
+
+  .comment-count {
+    font-size: 15px;
+  }
+
+  .comment-box {
+    font-size: 15px;
+  }
+
+  // registrations/edit.html
+  .field {
+    font-size: 20px;
+  }
+
+  .input-field {
+    font-size: 15px;
+  }
+
+  .acount-delete {
+    font-size: 25px;
+    padding: 0 200px;
+  }
+
+  .acount-delete:before,
+  .acount-delete:after {
+    width: 30%;
+  }
+
+  .back-btn {
+    font-size: 17px;
+  }
+
+  .warning-text {
+    font-size: 15px;
+  }
+  .delete-link {
+    font-size: 15px;
+  }
+
+  // header
+  .header-right {
+    font-size: 15px;
+  }
+
+  // footer
+  .footer-wrapper {
+    height: 30px;
+  }
+
+  .footer-wrapper h4 {
+    font-size: 15px;
+    width: 90%;
+    bottom: 1em;
+    right: 30%;
+  }
+}

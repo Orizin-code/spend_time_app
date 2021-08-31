@@ -1,0 +1,16 @@
+<div class="input-wrapper">
+  <%= form_with model: @post, local: true do |form| %>
+    <div class="field">
+      <%= form.label :title, class:"post-title" %><br />
+      <%= form.text_field :title, required: true, class:"area-field" %>
+    </div>
+    
+    <div class="field">
+      <%= form.label :content, class:"post-title" %><br />
+      <%= form.text_area :content, required: true, size: "50x10", class:"area-field" %>
+    </div>
+    <br>
+    <%= form.submit "送信", class:"submit-btn" %>
+  <% end %>
+  <p class="back-link"><%= link_to "投稿一覧へ", posts_path, class:"back-btn" %></p>
+</div>

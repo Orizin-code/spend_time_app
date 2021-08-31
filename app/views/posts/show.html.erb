@@ -1,0 +1,41 @@
+<!-- 投稿内容 -->
+<h1 class="content-title">---投稿詳細---</h1>
+<div class="user-post">
+  <p><%= @post.user.username %> <%= @post.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
+  <a class="post-title"><%= @post.title %></a>
+  <p><%= simple_format(h @post.content) %></p>
+
+  <p id="post-<%= @post.id %>">
+    <% if @post.liked_by?(current_user) %>
+      <%= render "like", post: @post %>
+    <% else %>
+      <%= render "dislike", post: @post %>
+    <% end %>
+  </p>
+
+  <!-- 投稿編集と削除 -->
+  <% if current_user.id == @post.user_id %>
+    <p class="post-btn">
+      <%= link_to "編集", edit_post_path(@post), class:"post-edit" %>
+      <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" }, class:"delete" %>
+    </p>
+  <% end %>
+</div>
+<p class="post-move"><%= link_to "投稿一覧へ", posts_path, class:"move-btn" %></p>
+
+<!-- コメント一覧 -->
+<div class="row">
+  <% if user_signed_in? %>
+    <div class="comment-create">
+      <h3 class="text-left">コメントを投稿する</h3>
+      <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+    </div>
+  <% end %>
+  <hr>
+  <h2 class="text-comments">コメント一覧</h2>
+  <div class="comments_area">
+    <%= render partial: 'comments/index', locals: { comments: @comments } %>
+  </div>
+</div>
+
+<p class="post-move"><%= link_to "投稿一覧へ", posts_path, class:"move-btn" %></p>
