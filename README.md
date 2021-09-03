@@ -1,24 +1,3 @@
-# README
+## おうち時間〜spendtime〜
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/TOPPAGE.png?raw=true)
