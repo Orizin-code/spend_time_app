@@ -16,7 +16,7 @@ class User < ApplicationRecord
             uniqueness: true,
             length: { maximum: 255 },
             format: { with: VALID_EMAIL_REGEX }
-  validates :password, length: { in: 8..16, allow_blank: true },
+  validates :password, length: { in: 8..30, allow_blank: true },
                        format: { with: /\A[a-zA-Z\d@\-_]+\z/, allow_blank: true,
                                  message: "で利用できるのは、半角英数字および記号(@, -, _)のみです。" }
 

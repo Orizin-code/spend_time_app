@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# 管理者用アカウント
-AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password") if Rails.env.development?
+# 管理者用メールアドレスを設定
+admin_email = "admin@example.com"
+user = "マスター"
 email = "test@example.com"
 password = "password"
 
@@ -38,7 +39,6 @@ Post7 = User7.posts.create!(title: "ヨガ", content: "自宅でヨガをして�
 Post8 = User8.posts.create!(title: "DIYをやっています", content: "ここ最近作ったのが傘立てとテーブルを作りました！自分が作ったテーブルでご飯を食べたりして自己満足しております。")
 Post9 = User9.posts.create!(title: "お菓子作り", content: "家族みんなでお菓子を作っています。みんなで作ることで楽しい時間が過ごせます！最近作ったのがプリンとマカロンです！")
 Post10 = User3.posts.create!(title: "手編みマフラー", content: "マフラーを作ってみました！手編みマフラーを作っていたら時間があっという間に過ぎています。次はランチョンマットを作ろうと思っています！")
-Post11 = User6.posts.create!(title: "YouTube", content: "自宅で過ごすことが増えたのでよくYoutubeを見るようになりました。大食いの動画をよくみます。他におすすめがあれば教えてください！")
 
 puts "初期投稿データ投入完了"
 
@@ -49,4 +49,9 @@ Post5.likes.create!(user_id: User1.id)
 puts "初期いいねデータ投入完了"
 
 # ログイン時に使用するアカウント
-User.create!(email: email, password: password)
+User.create!(username: user, email: email, password: password)
+
+AdminUser.find_or_create_by!(email: admin_email) do |adminuser|
+  adminuser.password = password
+  puts "管理者ユーザーの初期データインポートに成功しました。"
+end
