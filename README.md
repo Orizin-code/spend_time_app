@@ -3,7 +3,7 @@
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/TOPPAGE.png?raw=true)
 
 ## URL
-- アプリURL:https://spend-time-app.herokuapp.com/
+- アプリURL:後日記載
   - ゲストログインからアクセスするとアカウント作成は不要です。
 
 ## アプリ概要
