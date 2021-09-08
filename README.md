@@ -43,9 +43,17 @@
 - 「投稿一覧へ」を押すと投稿一覧画面へ戻ります。
 - 「コメントを投稿する」からコメントを入力し、「書き込む」を押すことで画面上の投稿に対してコメントができます。
 
-# コメント画面
+## コメント画面
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/show-comment.png?raw=true)
 - 投稿詳細画面をそのまま下へスクローした画面遷移となります。
+
+## 管理者画面
+![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/adminuser.png?raw=true)
+- Admin Comment(管理者のコメント)
+- コメント（ユーザーの投稿に対するコメント）
+- ユーザー（ユーザーアカウント情報）
+- 投稿（ユーザーの投稿内容）
+- 管理者ユーザー（管理者のアカウント情報）
 
 ## 工夫した点
 説明書がなくても直感的に誰でも操作ができるよう作成しました。  
