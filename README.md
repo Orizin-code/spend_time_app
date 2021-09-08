@@ -45,7 +45,7 @@
 
 ## コメント画面
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/show-comment.png?raw=true)
-- 投稿詳細画面をそのまま下へスクローした画面遷移となります。
+- 投稿詳細画面をそのまま下へスクロールした画面遷移となります。
 
 ## 管理者画面
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/adminuser.png?raw=true)
@@ -57,7 +57,7 @@
 
 ## 工夫した点
 説明書がなくても直感的に誰でも操作ができるよう作成しました。  
-具体的にレイアウトは「シンプル」をコンセプトに細かく長い文章は使わないよう意識しました。  
+具体的にレイアウトは「シンプル」をコンセプトに長い文章は使わないよう意識しました。  
 Githubはチーム開発を意識しGitflowを採用しました。  
 
 ## 追加予定の機能
