@@ -35,7 +35,7 @@
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/postpage.png?raw=true)
 - キーワード検索することで投稿の絞り込みができます。
 - Good!ボタンはいいね機能となります。
-- 投稿された記事の詳細ボタンを押すとコメントができます。
+- 投稿された記事の詳細ボタンを押すと投稿詳細画面へ移動します。
 
 ## 投稿詳細画面
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/showpage.png?raw=true)
