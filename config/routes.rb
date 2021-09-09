@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   end
   resources :tops, only: [:index, :edit, :update]
   get "/mypage/:id", to: "tops#show", as: "mypage"
+
+  get "/contacts", to: "contacts#index", as: "contacts"
 end
