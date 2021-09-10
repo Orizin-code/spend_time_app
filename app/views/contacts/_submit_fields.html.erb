@@ -1,12 +1,12 @@
-<div>
-  <%= form.label :name %> (必須)
-  <%= form.text_field :name %>
+
+<div class="field">
+  <%= form.text_field :name, placeholder: "氏名またはニックネーム", class:"input-field" %>
 </div>
-<div>
-  <%= form.label :email %> (必須)
-  <%= form.email_field :email, required: true, pattern: "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]+$" %>
+
+<div class="field">
+  <%= form.email_field :email, placeholder: "メールアドレス", required: true, pattern: "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]+$", class:"input-field" %>
 </div>
-<div>
-  <%= form.label :content %> (必須)
-  <%= form.text_area :content, required: true %>
+<p>お問い合わせ内容</p>
+<div class="field">
+  <%= form.text_area :content, required: true, size: "10x5", class:"input-field", class:"area-field" %>
 </div>
