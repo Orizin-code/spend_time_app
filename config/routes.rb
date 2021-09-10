@@ -24,4 +24,5 @@ Rails.application.routes.draw do
 
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   get "/contacts", to: "contacts#index", as: "contacts"
+  resources :contacts, only: %i[index create]
 end
