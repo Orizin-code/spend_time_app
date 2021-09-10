@@ -1,4 +1,4 @@
-<h1 class="content-title">--お問い合わせフォーム--<%= " 《確認》" if @contact.submitted == "1" %></h1>
+<h1 class="content-title">--お問い合わせフォーム--<%= " 《最終確認》" if @contact.submitted == "1" %></h1>
 <div class="input-wrapper">
   <%= form_with model: @contact, local: true do |form| %>
     <%= render "error_messages", form: form %>
