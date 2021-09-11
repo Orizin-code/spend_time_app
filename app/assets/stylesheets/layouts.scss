@@ -98,3 +98,21 @@ h4:after {
 .footer-wrapper h4:after {
   right: 5%;
 }
+
+.contacts-from {
+  text-align: right;
+}
+
+.contacts-btn {
+  color: #158b2b;
+  margin-right: 40px;
+  text-shadow: 1px 0 0 black;
+}
+
+.contacts-from :hover {
+  color: white;
+  background-color: #158b2b;
+  border-radius: 5px;
+  text-shadow: 1px 0 5px black;
+  padding: 5px;
+}

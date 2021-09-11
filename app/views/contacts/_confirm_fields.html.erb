@@ -1,0 +1,13 @@
+<div class="field">
+  <%= form.text_field :name, readonly: true, class:"input-field" %>
+  <%= form.hidden_field :name %>
+</div>
+<div class="field">
+  <%= form.text_field :email, readonly: true, class:"input-field" %>
+  <%= form.hidden_field :email %>
+</div>
+<p>お問い合わせ内容</p>
+<div class="field">
+  <%= form.text_area :content, readonly: true, size: "10x5", class:"input-field", class:"area-field" %>
+  <%= form.hidden_field :content %>
+</div>
