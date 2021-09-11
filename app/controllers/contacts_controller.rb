@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
       ContactMailer.user_email(@contact).deliver_now
       # 管理者にメールを送信
       ContactMailer.admin_email(@contact).deliver_now
-      redirect_to root_path
+      redirect_to root_path, notice: "お問い合わせありがとうございました。<送信完了>"
     else
       render :index
     end
