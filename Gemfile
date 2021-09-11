@@ -35,6 +35,7 @@ group :development do
   gem "rack-mini-profiler", "~> 2.0"
   gem "spring"
   gem "web-console", ">= 4.1.0"
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

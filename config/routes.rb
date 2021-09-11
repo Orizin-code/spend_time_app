@@ -21,4 +21,8 @@ Rails.application.routes.draw do
   end
   resources :tops, only: [:index, :edit, :update]
   get "/mypage/:id", to: "tops#show", as: "mypage"
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+  get "/contacts", to: "contacts#index", as: "contacts"
+  resources :contacts, only: %i[index create]
 end
