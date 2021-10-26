@@ -1,16 +1,14 @@
-<div class="content-all">
-  <h1 class="content-title">---投稿一覧---</h1>
-  <div class="list-seach">
-    <h3>キーワードで検索</h3>
-    <%= search_form_for @q do |f| %>
-      <%= f.search_field :title_cont, placeholder: "タイトルで検索", autocomplete: "title_cont", class:"keyword" %>
-      <%= f.search_field :content_cont, placeholder: "内容で検索", autocomplete: "content_cont", class:"keyword" %>
-      <%= f.submit "検索", class:"submit-btn" %>
-    <% end %>
-    <p class="seach-clear"><%= link_to "検索をクリア", posts_path, class:"seach-btn" %></p>
-  </div>
-  <%= render @posts %>
-  <div class="paginate-btn">
-    <%= paginate @posts %>
-  </div>
+<h1 class="content-title">---投稿一覧---</h1>
+<div class="list-seach">
+  <h3>キーワードで検索</h3>
+  <%= search_form_for @q do |f| %>
+    <%= f.search_field :title_cont, placeholder: "タイトルで検索", autocomplete: "title_cont", class:"keyword" %>
+    <%= f.search_field :content_cont, placeholder: "内容で検索", autocomplete: "content_cont", class:"keyword" %>
+    <%= f.submit "検索", class:"submit-btn" %>
+  <% end %>
+  <p class="seach-clear"><%= link_to "検索をクリア", posts_path, class:"seach-btn" %></p>
+</div>
+<%= render @posts %>
+<div class="paginate-btn">
+  <%= paginate @posts %>
 </div>
