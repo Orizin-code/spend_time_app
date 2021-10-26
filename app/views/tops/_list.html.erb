@@ -1,0 +1,7 @@
+<% @likes.each do |like| %>
+  <div class="likes_list">
+    <a> 名前：<%= like.post.user.username %></a><br>
+    <a>タイトル：<%= like.post.title %></a><br>
+    <p><%= like.post.content %></p>
+  </div>
+<% end %>

@@ -2,7 +2,7 @@
 <a class="comment-count">コメント数<%= comments.count %>件</a>
 <% comments.each do |comment| %>
   <% unless comment.id.nil? %>
-    <div class="comment-box">           
+    <div class="comment-box">
       <p> <%= comment.user.username %> <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
       <%= simple_format(h comment.content) %>
       <% if comment.user == current_user %>
@@ -11,4 +11,3 @@
     </div>
   <% end %>
 <% end %>
-

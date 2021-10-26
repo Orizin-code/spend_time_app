@@ -24,18 +24,17 @@
 <p class="post-move"><%= link_to "投稿一覧へ", :back, class:"move-btn" %></p>
 
 <!-- コメント一覧 -->
-<div class="row">
-  <% if user_signed_in? %>
-    <div class="comment-create">
-      <h3 class="text-left">コメントを投稿する</h3>
-      <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
-    </div>
-  <% end %>
-  <hr>
-  <h2 class="text-comments">コメント一覧</h2>
-  <div class="comments-area">
-    <%= render partial: 'comments/index', locals: { comments: @comments } %>
+<% if user_signed_in? %>
+  <div class="comment-create">
+    <h3 class="text-left">コメントを投稿する</h3>
+    <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
   </div>
+<% end %>
+<hr>
+<h2 class="text-comments">コメント一覧</h2>
+<div class="comments-area">
+  <%= render partial: 'comments/index', locals: { comments: @comments } %>
 </div>
+
 
 <p class="post-move"><%= link_to "投稿一覧へ", :back, class:"move-btn" %></p>

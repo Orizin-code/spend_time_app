@@ -3,9 +3,10 @@
   <div class="menu-wrapper">
     <p class="username"><%= "ー #{current_user.username}さん ー" %></p>
     <div class="mypage-btn">
-      <a><%= link_to "アカウント編集", edit_user_registration_path, class:"edit" %></a><br>
+      <a><%= link_to "いいねした一覧", likelist_path, class:"edit" %></a><br>
+      <br><a><%= link_to "アカウント編集", edit_user_registration_path, class:"edit" %></a><br>
       <br><a><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout" %></a><br>
-      <br><a><%= link_to "戻る", posts_path, class:"back" %></a>
+      <br><a><%= link_to "投稿一覧へ戻る", posts_path, class:"back" %></a>
     </div>
   </div>
 </div>
