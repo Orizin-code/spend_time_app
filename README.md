@@ -68,6 +68,10 @@
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/show-comment.png?raw=true)
 - 投稿詳細画面をそのまま下へスクロールした画面遷移となります。
 
+## Goodした一覧ページ
+![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/%E3%81%84%E3%81%84%E3%81%AD%E4%B8%80%E8%A6%A7%E3%83%9A%E3%83%BC%E3%82%B8.png?raw=true)
+- Goodを押したユーザーの一覧ページとなります。
+
 ## 管理者画面
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/adminuser.png?raw=true)
 - Admin Comment(管理者のコメント)
