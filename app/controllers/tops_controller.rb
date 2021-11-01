@@ -10,6 +10,6 @@ class TopsController < ApplicationController
 
   def like
     @user = current_user
-    @likes = Like.where(user_id: @user.id).all.page(params[:page]).per(PER_PAGE)
+    @likes = Like.where(user_id: @user.id).all.page(params[:page]).per(PER_PAGE).order(created_at: :desc)
   end
 end
