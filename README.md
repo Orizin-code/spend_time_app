@@ -54,22 +54,20 @@
 
 ## 投稿一覧画面
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/postpage.png?raw=true)
+![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/postlist.png?raw=true)
 - キーワード検索することで投稿の絞り込みができます。
 - Good!ボタンはいいね機能となります。
 - 投稿された記事の詳細ボタンを押すと投稿詳細画面へ移動します。
 
 ## 投稿詳細画面
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/showpage.png?raw=true)
+![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/showcomment.png?raw=true)
 - 詳細画面のイメージです。
 - 「投稿一覧へ」を押すと投稿一覧画面へ戻ります。
-- 「コメントを投稿する」からコメントを入力し、「書き込む」を押すことで画面上の投稿に対してコメントができます。
-
-## コメント画面
-![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/show-comment.png?raw=true)
-- 投稿詳細画面をそのまま下へスクロールした画面遷移となります。
+- 「コメントを投稿する」からコメントを入力し、「書き込む」を押すことで画面上の投稿に対してコメントができます。  
 
 ## Goodリストページ
-![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/Good%E3%83%AA%E3%82%B9%E3%83%88.png?raw=true)
+![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/goodlist.png?raw=true)
 - Goodを押したユーザーの一覧ページとなります。
 
 ## 管理者画面
