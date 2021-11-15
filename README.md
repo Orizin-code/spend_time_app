@@ -22,9 +22,9 @@
 
 ## 工夫した点
 1.レイアウト関連  
-- 長い文章を使わないことで、説明書がなくても直感的に誰でも操作ができるよう制作。
-- フロントのフレームワークを利用しないことで、型にはまらないオリジナルのデザインに実装。
+- 長い文章を使わないことで、説明書がなくても直感的に誰でも操作ができるよう制作。  
 - スマホでの利用率が高いことを考え、文字サイズは見やすく設定  
+- ボタンはなるべく片手で操作ができるよう右側に設置
 
 2.お問合せフォーム  
 - Userテーブルと関連付けをあえてしないことで非ログイン時でもアクセスできるようにしました。  
@@ -50,7 +50,7 @@
 - ソースコード管理：GitHub
 
 ## ER図
-![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/ER%E5%9B%B3.png?raw=true)
+![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/ER%E5%9B%B3%2012.15.19.png?raw=true)
 
 ## 投稿一覧画面
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/postpage.png?raw=true)
