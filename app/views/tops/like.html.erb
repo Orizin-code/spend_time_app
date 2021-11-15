@@ -1,7 +1,9 @@
-<h1 class="content-title">---Goodリスト---</h1>
+<div class="top-container d-flex align-items-center justify-content-center bg-success">
+  <h2 class="content-title text-white font-weight-bolder">---Goodリスト---</h2>
+</div>
 <%= render "list" %>
 <div class="paginate-btn">
   <%= paginate @likes %>
 </div>
 <hr>
-<p class="post-move"><%= link_to "マイページへ", mypage_path(current_user), class:"move-btn" %></p>
+<p class="d-flex justify-content-end"><%= link_to "マイページへ", mypage_path(current_user), type:"button", class:"page-post text-white btn btn-info" %></p>

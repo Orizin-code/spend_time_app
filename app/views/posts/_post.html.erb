@@ -1,19 +1,18 @@
-<div class="user-post">
-  <p>投稿者： <%= post.user.username %></p>
-  タイトル：<a class="post-title"><%= post.title %></a>
-  <p id="post-<%= post.id %>">
-    <% if post.liked_by?(current_user) %>
-      <%= render "like", post: post %>
-    <% else %>
-      <%= render "dislike", post: post %>
-    <% end %>
-  </p>
-  <p class="post-btn">
-    <%= link_to "詳細", post, class:"detail" %>
-    <% if current_user.id == post.user_id %>
-      <%= link_to "編集", edit_post_path(post), class:"post-edit" %>
-      <%= link_to "削除", post_path(post), method: :delete, data: { confirm: "削除しますか？" }, class:"delete" %>
-    <% end %>
-  </p>
-</div>
+<p>投稿者： <%= post.user.username %></p>
+<p class="font-weight-bolder">タイトル：<%= post.title %></p>
+<p id="post-<%= post.id %>">
+  <% if post.liked_by?(current_user) %>
+    <%= render "like", post: post %>
+  <% else %>
+    <%= render "dislike", post: post %>
+  <% end %>
+</p>
+<p class="d-flex justify-content-end">
+  <%= link_to "詳細", post, type:"button", class:"btn btn-outline-success option-btn" %>
+  <% if current_user.id == post.user_id %>
+    <%= link_to "編集", edit_post_path(post), type:"button", class:"btn btn-outline-primary option-btn" %>
+    <%= link_to "削除", post_path(post), method: :delete, data: { confirm: "削除しますか？" }, type:"button", class:"btn btn-outline-danger option-btn" %>
+  <% end %>
+</p>
 <hr>
+
