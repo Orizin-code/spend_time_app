@@ -91,12 +91,8 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   }
 
   .message-text {
-    font-size: 12px;
+    font-size: 15px;
     height: 80px;
-  }
-
-  .acount-wrapper {
-    height: 170px;
   }
 
   .menu-wrapper {
@@ -108,7 +104,12 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   }
 
   .menu-select-btn {
-    height: 70px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .guest-btn {
+    margin-top: 20px;
   }
 
   .select-btn {
@@ -142,11 +143,13 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   }
 
   .mymenu-select {
-    font-size: 10px;
+    font-size: 15px;
+    margin: 20px;
   }
 
   .menu-btn {
-    height: 100px;
+    height: auto;
+    padding: 20px;
   }
 
   // 投稿一覧
@@ -247,5 +250,20 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   .contact {
     font-size: 13px;
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 575px) {
+  .guest-btn {
+    margin-top: 0px;
+  }
+
+  .mymenu-select {
+    margin: 1px;
+  }
+
+  .message-text {
+    font-size: 15px;
+    margin-bottom: 15px;
   }
 }
