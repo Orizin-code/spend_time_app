@@ -1,16 +1,24 @@
-<div class="input-wrapper">
+<div class="d-flex justify-content-center">
   <%= form_with model: @post, local: true do |form| %>
-    <div class="field">
-      <%= form.label :title, class:"post-title" %><br />
-      <%= form.text_field :title, required: true, class:"area-field" %>
+    <h5 class="d-flex justify-content-center">
+      <%= form.label :title, class:"post-title font-weight-bolder" %><br />
+    </h5>
+    <div class="d-flex justify-content-center">
+      <%= form.text_field :title, required: true, class:"text-area-field" %>
     </div>
     
-    <div class="field">
-      <%= form.label :content, class:"post-title" %><br />
-      <%= form.text_area :content, required: true, size: "50x10", class:"area-field" %>
+    <h5 class="d-flex justify-content-center">
+      <%= form.label :content, class:"post-title font-weight-bolder" %><br />
+    </h5>
+    <div class="d-flex justify-content-center">
+      <%= form.text_area :content, required: true, size: "50x10", class:"text-area-field" %>
     </div>
     <br>
-    <%= form.submit "送信", class:"submit-btn" %>
+    <div class="d-flex justify-content-end">
+      <%= form.submit "送信", class:"submit-btn" %>
+    </div>
   <% end %>
-  <p class="back-link"><%= link_to "投稿一覧へ", posts_path, class:"back-btn" %></p>
+</div>
+<div class="d-flex justify-content-end">
+  <%= link_to "投稿一覧へ", posts_path, type:"button", class:"page-post text-white btn btn-info" %>
 </div>

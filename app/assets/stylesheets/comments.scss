@@ -1,26 +1,13 @@
 .comment-count {
-  margin-left: 5px;
-  border-bottom: solid 1px black;
-  margin: 0 15%;
+  margin-left: 5%;
 }
 
 .comment-box {
-  padding: 0.5em 1em;
-  margin: 1em 15%;
-  background: #f4f4f4;
-  border-left: solid 6px #5bb7ae;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
-}
-
-.comments-area {
+  margin-top: 15px;
+  box-shadow: 1px 1px 3px black;
   word-break: break-all;
 }
 
-.comment-delete {
-  text-align: right;
-}
-
-.comment-delete-btn {
-  color: red;
-  cursor: pointer;
+.comment-btn {
+  margin-right: 10px;
 }

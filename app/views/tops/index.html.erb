@@ -1,41 +1,34 @@
-<body>
-  <header>
-  <!-- layouts/_header.html.erbファイルに記入 -->
-  </header>
-  <div class="all-warapper">
-    <div class="top-title">
-      <h1 class="title-text">おうち時間〜spendtime〜</h1>
-    </div>
-    <div class="message-wrapper"> 
-      <a class="message-title">おうち時間〜spendtime〜とは</a>
-      <p>自宅での遊びや趣味を共有するコミュニティサイトです。
-      <br>自宅での過ごし方をみんなで共有し楽しい時間を増やしましょう。</p><br>
-      <div class="menu-select">
-        <a class="menu-select-title">〜〜ご利用の方はこちら〜〜</a>
-        <div class="btn-wrapper">
-          <% if user_signed_in? %>
-            <%# ログイン済みの表示 %>
-            <a class="link-btn">
-              <%= link_to "投稿一覧ページ", posts_path, class:"list" %>
-              <%= link_to "新規投稿", new_post_path, class:"post" %>
-            </a>
-          <% else %>
-            <%# 非ログイン時の表示 %>
-            <a class="link-btn">
-              <%= link_to "ログイン", new_user_session_path, class:"login" %>
-              <%= link_to "新規登録", new_user_registration_path, class:"signup" %><br>
-              <br><%= link_to "ゲストログイン", users_guest_sign_in_path, method: :post, class:"guest" %>
-            </a>
-          <% end %>
-        </div>
-      </div>
-      <div class="infomation-container">
-        <h3>お知らせ</h3>
-      </div>
-    </div>
-    <p class="infomation-text">・今後のお知らせはここに記載します。</p>
+<div class="container">
+  <div class="top-container d-flex align-items-center justify-content-center bg-success">
+    <h2 class="title text-white bg-info">おうち時間〜spendtime〜</h2>
   </div>
-  <footer>
-    <!-- layouts/_footer.html.erbファイルに記入 -->
-  </footer>
-</body>
+  <div class="message-title d-flex align-items-center justify-content-center"> 
+    <h3 class="title-text font-weight-bolder text-success">おうち時間〜spendtime〜とは<h3>
+  </div>
+  <div class="message-text font-weight-bolder title-explanation d-flex align-items-start justify-content-center"> 
+    自宅での遊びや趣味を共有するコミュニティサイトです。<br>
+    自宅での過ごし方をみんなで共有し楽しい時間を増やしましょう。
+  </div>
+  <div class="acount-wrapper bg-success">
+    <div class="menu-wrapper d-flex align-items-center justify-content-center">
+      <h4 class="menu-select text-white" style="height:60px;">〜〜ご利用の方はこちら〜〜</h4>
+    </div>
+    <div class="row menu-select-btn d-flex align-items-center justify-content-center">
+      <% if user_signed_in? %>
+      <%# ログイン済みの表示 %>
+        <%= link_to "投稿一覧ページ", posts_path, type:"button", class:"select-btn btn btn-info" %>
+        <%= link_to "新規投稿", new_post_path, type:"button", class:"select-btn btn btn-info" %>
+      <% else %>
+        <%# 非ログイン時の表示 %>
+        <%= link_to "ログイン", new_user_session_path, type:"button", class:"select-btn btn btn-info col-3 col-md-3" %>
+        <%= link_to "新規登録", new_user_registration_path, type:"button", class:"select-btn btn btn-info col-3 col-md-3" %>
+        <div class="w-100"></div>
+        <%= link_to "ゲストログイン", users_guest_sign_in_path,method: :post, type:"button", class:"select-btn btn btn-info col-5 col-md-3" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="infomation-container d-flex align-items-start justify-content-center">
+    <h4 class="infomation-title">お知らせ</h4>
+  </div>
+  <div class="infomation-text">・今後のお知らせはここに記載します。</div>
+</div>

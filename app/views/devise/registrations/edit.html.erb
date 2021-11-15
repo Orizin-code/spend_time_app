@@ -1,44 +1,47 @@
-<h1 class="content-title">--アカウント編集--</h1>
-<div class="input-wrapper">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+<div class="top-container d-flex align-items-center justify-content-center bg-success" style="height:200px;">
+  <h2 class="text-white font-weight-bolder">--アカウント編集--</h2>
+</div>
 
-    <div class="field">
-      <%= f.label :新しい名前または現在の名前 %><br />
-      <%= f.text_field :username, placeholder: "名前入力(16文字以内)",required: true, maxlength:"16", class:"input-field" %>
-    </div>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
 
-    <div class="field">
-      <%= f.label :メールアドレス %><br />
-      <%= f.email_field :email, placeholder: "@example.com", autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class:"input-field" %>
-    </div>
+  <div class="d-flex justify-content-center">
+    <%= f.text_field :username, placeholder: "現在の名前または新しい名前入力(16文字以内)",required: true, maxlength:"16", class:"input-area-field" %>
+  </div>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
+  <div class="d-flex justify-content-center">
+    <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class:"input-area-field" %>
+  </div>
 
-    <div class="field">
-      <a><%= f.label :新しいパスワード %><br>(※パスワードの変更をしない場合は入力不要)</a><br />
-      <%= f.password_field :password, placeholder: "8文字以上", autocomplete: "new-password", class:"input-field" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :パスワード確認 %><br />
-      <%= f.password_field :password_confirmation, placeholder: "再入力", autocomplete: "new-password", class:"input-field" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :現在のパスワード %><br />
-      <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "パスワード", class:"input-field" %>
-    </div>
-    <br>
-    <%= f.submit "変更する", class:"submit-btn" %>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
+
+  <div class="d-flex justify-content-center">
+    <%= f.password_field :password, placeholder: "新しいパスワード8文字以上(変更する場合のみ)", autocomplete: "new-password", class:"input-area-field" %>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <%= f.password_field :password_confirmation, placeholder: "新しいパスワード再入力", autocomplete: "new-password", class:"input-area-field" %>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "現在のパスワード入力(必須)", class:"input-area-field" %>
+  </div>
   <br>
-  <p class="back-link"><%= link_to "キャンセル", mypage_path(current_user), class:"back-btn" %></p>
+  <div class="create-btn d-flex justify-content-center">
+    <%= f.submit "変更する", class:"submit-btn" %>
+    <div class="cancel-btn">
+      <%= link_to "キャンセル", mypage_path(current_user), class:"page-post text-white btn btn-danger" %>
+    </div>
+  </div>
+<% end %>
+<br>
+
   
   <!-- アカウント削除 -->
-  <h2 class="acount-delete">アカウント削除</h2><br />
-  <p class="warning-text">※アカウントを削除すると<%= "#{current_user.username}さん" %>が投稿した内容は全て削除されます。<p>
-  <p class="delete-link">アカウントを削除する場合は<%= button_to "こちら", registration_path(resource_name), data: { confirm: "アカウントは元に戻せません。削除しますか?" }, method: :delete, class:"submit-btn" %></p>
-</div>
+
+  <h4 class="create-btn d-flex justify-content-center">アカウント削除</h4><br />
+  <p class="text-danger d-flex justify-content-center">※アカウントを削除すると<%= "#{current_user.username}さん" %>が投稿した内容は全て削除されます。<p>
+  <div class="d-flex justify-content-center">アカウントを削除する場合は<%= link_to "こちら", registration_path(resource_name), data: { confirm: "アカウントは元に戻せません。削除しますか?" }, method: :delete, class:"" %></div>
+

@@ -1,12 +1,14 @@
-<div class="mypage-all-warapper">
-  <h1 class="content-title">---マイページ---</h1>
-  <div class="menu-wrapper">
-    <p class="username"><%= "ー #{current_user.username}さん ー" %></p>
-    <div class="mypage-btn">
-      <a><%= link_to "Goodリスト", likelist_path, class:"edit" %></a><br>
-      <br><a><%= link_to "アカウント編集", edit_user_registration_path, class:"edit" %></a><br>
-      <br><a><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"logout" %></a><br>
-      <br><a><%= link_to "投稿一覧へ戻る", posts_path, class:"back" %></a>
-    </div>
-  </div>
+<div class="top-container d-flex align-items-center justify-content-center bg-success">
+  <h2 class="content-title text-white font-weight-bolder">〜マイページ〜</h2>
+</div>
+<div class="mymenu-wrapper d-flex align-items-center justify-content-center">
+  <h3 class="name-text text-success font-weight-bolder"><%= "ー #{current_user.username}さん ー" %></h3>
+</div>
+
+<div class="row menu-btn d-flex align-items-center justify-content-center">
+  <%= link_to "Goodリスト", likelist_path, type:"button", class:"btn btn-info mymenu-select col" %>
+  <%= link_to "アカウント編集", edit_user_registration_path, type:"button", class:"btn btn-info mymenu-select col" %>
+  <div class="w-100"></div>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, type:"button", class:"btn btn-info mymenu-select col" %>
+  <%= link_to "投稿一覧へ", posts_path, type:"button", class:"btn btn-info mymenu-select col" %>
 </div>

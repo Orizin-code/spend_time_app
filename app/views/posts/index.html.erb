@@ -1,14 +1,24 @@
-<h1 class="content-title">---投稿一覧---</h1>
-<div class="list-seach">
-  <h3>キーワードで検索</h3>
+<div class="top-container d-flex align-items-center justify-content-center bg-success">
+  <h2 class="content-title text-white font-weight-bolder">〜投稿一覧〜</h2>
+</div>
+<hr>
+<div class="list-search bg-light">
+  <h5 class="search-title">キーワードで検索</h5>
   <%= search_form_for @q do |f| %>
-    <%= f.search_field :title_cont, placeholder: "タイトルで検索", autocomplete: "title_cont", class:"keyword" %>
-    <%= f.search_field :content_cont, placeholder: "内容で検索", autocomplete: "content_cont", class:"keyword" %>
+    <%= f.search_field :title_cont, placeholder: "タイトルで検索", autocomplete: "title_cont" %>
+    <%= f.search_field :content_cont, placeholder: "内容で検索", autocomplete: "content_cont" %>
     <%= f.submit "検索", class:"submit-btn" %>
   <% end %>
-  <p class="seach-clear"><%= link_to "検索をクリア", posts_path, class:"seach-btn" %></p>
+  <div class="d-flex justify-content-end">
+    <div type="button" class="search-clear">
+      <%= link_to "検索をクリア", posts_path, class:"clear-btn text-white btn btn-info" %>
+    </div>
+  </div>
 </div>
-<%= render @posts %>
+<hr>
+<div class="post-list bg-light">
+  <%= render @posts %>
+</div>
 <div class="paginate-btn">
   <%= paginate @posts %>
 </div>

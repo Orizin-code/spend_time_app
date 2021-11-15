@@ -1,4 +1,8 @@
-<p class="contacts-from">・<%= link_to "お問い合わせフォーム", contacts_path, class: "contacts-btn" %></p>
-<div class="footer-wrapper">
-  <h4 class="footer-text">Copyright © おうち時間 All rights reserved.</h4>
-</div>
+<footer class="footer bg-success">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-center" style="height:100px;">
+      <div class="footer-text text-dark">Copyright © おうち時間 All rights reserved.</div>
+      <%= link_to "お問い合わせフォーム", contacts_path, class: "contact nav-link text-light active" %>
+    </div>
+  </div>
+</footer>

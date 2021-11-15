@@ -1,170 +1,50 @@
-// 投稿一覧ページ
-.content-title {
-  text-align: center;
-  font-family: fantasy;
-  border-top: double 7px rgb(6, 143, 6);
-  border-bottom: double 7px rgb(6, 143, 6);
-  padding: 20px 0 20px 0;
-  margin-top: 40px;
-  margin-bottom: 12px;
-  color: #158b2b;
-  background-color: rgb(234, 255, 228);
-  box-shadow: 0 4px 8px 0 #1a7940;
+// 投稿一覧
+.list-search {
+  box-shadow: 2px 2px 3px black;
+  padding: 40px;
 }
 
-.list-seach {
-  padding: 7px 0 10px 28px;
-  margin: 0 15% 20px 15%;
-  position: relative;
-  background: #bae7dc;
-  border: solid 1px black;
+.search-clear {
+  margin-top: 10px;
 }
 
-.list-seach:before {
-  position: absolute;
-  content: '';
-  top: 100%;
-  left: 0;
-  border: none;
-  border-bottom: solid 15px transparent;
-  border-right: solid 20px rgb(149, 158, 155);
+.clear-btn {
+  text-shadow: 0px 1px 1px black;
+  box-shadow: 2px 2px 3px black;
 }
 
-.keyword {
-  font-size: 15px;
-  padding: 5px;
-}
-
-.user-post {
-  margin: 0 15%;
-  padding: 1px 0 1px 20px;
-  position: relative;
-  background: #dfefff;
-  box-shadow: 0px 0px 0px 5px #dfefff;
-  border: dashed 2px black;
+.post-list {
+  padding: 20px;
+  box-shadow: 2px 2px 3px black;
   word-break: break-all;
 }
 
-.user-post :after {
-  position: absolute;
-  content: '';
-  left: -7px;
-  top: -7px;
-  border-width: 0 0 15px 15px;
-  border-style: solid;
-  border-color: #fff #fff #a8d4ff;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+.option-btn {
+  margin-right: 10px;
 }
 
-.post-title {
-  font-size: large;
-  font-weight: 600;
-}
-
-.post-btn :hover {
-  opacity: 1;
-  background-color: #039203;
-}
-
-.post-btn {
-  :active {
-    box-shadow: none;
-    position: relative;
-    top: 5px;
-    left: 3px;
-  }
-}
-
-.detail {
-  color: white;
-  background-color: #4ca084;
-  text-shadow: 1px 0 5px black;
-  border-radius: 5px;
-  opacity: 0.8;
-  padding: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border: 1px solid #333333;
-  cursor: pointer;
-  box-shadow: 3px 5px #1a7940;
-}
-
-.post-edit {
-  color: white;
-  background-color: #4ca084;
-  text-shadow: 1px 0 5px black;
-  border-radius: 5px;
-  opacity: 0.8;
-  padding: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border: 1px solid #333333;
-  cursor: pointer;
-  box-shadow: 3px 5px #1a7940;
-}
-
-.delete {
-  color: white;
-  background-color: #4ca084;
-  text-shadow: 1px 0 5px black;
-  border-radius: 5px;
-  opacity: 0.8;
-  padding: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border: 1px solid #333333;
-  cursor: pointer;
-  box-shadow: 3px 5px #1a7940;
-}
-
-.seach-clear :hover {
-  opacity: 1;
-  background-color: rgb(60, 60, 253);
-}
-
-.seach-clear {
-  :active {
-    box-shadow: none;
-    position: relative;
-    top: 5px;
-    left: 3px;
-  }
-}
-
-.seach-btn {
-  color: white;
-  background-color: #6da7ff;
-  text-shadow: 1px 0 5px black;
-  border-radius: 5px;
-  opacity: 0.8;
-  padding: 5px 5px;
-  border: 1px solid #333333;
-  cursor: pointer;
-  box-shadow: 3px 5px rgb(41, 41, 248);
-}
-
-.like-btn {
-  color: white;
-  background-color: blue;
-  box-shadow: 0 1px 4px 0 rgb(41, 41, 248);
-  text-shadow: 1px 0 2px black;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.dislike-btn {
-  color: black;
-}
-
-// 新規投稿ページ
-.area-field {
-  resize: none;
-  font-size: 15px;
-  padding: 5px;
-  width: 60%;
+.pagination {
+  margin-top: 20px;
+  justify-content: center;
 }
 
 // 投稿詳細ページ
+.post-content {
+  padding: 20px;
+  box-shadow: 2px 2px 3px black;
+  word-break: break-all;
+  margin-top: 30px;
+}
+
+.back-box {
+  margin-top: 25px;
+}
+
+.page-post {
+  text-shadow: 0px 1px 1px black;
+  box-shadow: 2px 2px 3px black;
+}
+
 .text-comments {
   text-align: center;
   padding-bottom: 15px;
@@ -193,7 +73,7 @@
 }
 
 .comment-create {
-  padding: 5px 0 10px 15px;
+  padding: 15px 0 15px 15px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
   margin: 0 15% 20px 15%;
   position: relative;
@@ -212,19 +92,7 @@
   height: 0;
 }
 
-.post-move :hover {
-  background-color: rgb(58, 58, 58);
-  color: white;
-}
-
-.move-btn {
-  margin: 0 15%;
-  color: rgb(247, 7, 7);
-  font-size: 17px;
-  background-color: #f1f7f5;
-  border-radius: 5px;
-  padding: 5px 15px 5px 15px;
-  border: 1px solid #333333;
-  cursor: pointer;
-  transition: 0.3s;
+// 投稿画面
+.post-title {
+  margin-top: 20px;
 }

@@ -1,12 +1,14 @@
 <!---- コメント内容 ----->
-<a class="comment-count">コメント数<%= comments.count %>件</a>
+<p class="comment-count">コメント数<%= comments.count %>件</p>
 <% comments.each do |comment| %>
   <% unless comment.id.nil? %>
-    <div class="comment-box">
+    <div class="comment-box border-left border-success bg-light" style="padding:20px;">
       <p> <%= comment.user.username %> <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
       <%= simple_format(h comment.content) %>
       <% if comment.user == current_user %>
-        <div class="comment-delete"><%= link_to "削除", post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, data: { confirm: "削除しますか？" }, class: "comment-delete-btn" %></div>
+        <div class="d-flex justify-content-end">
+          <%= link_to "削除", post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, data: { confirm: "削除しますか？" }, class: "btn btn-outline-danger option-btn" %>
+        </div>
       <% end %>
     </div>
   <% end %>

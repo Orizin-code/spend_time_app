@@ -1,5 +1,5 @@
 <% @likes.each do |like| %>
-  <div class="likes_list">
+  <div class="comment-box border-left border-success bg-light" style="padding:20px;">
     <a> 名前：<%= like.post.user.username %></a><br>
     <a>タイトル：<%= like.post.title %></a><br>
     <p><%= like.post.content %></p>

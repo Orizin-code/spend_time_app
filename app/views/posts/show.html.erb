@@ -1,10 +1,11 @@
 <!-- 投稿内容 -->
-<h1 class="content-title">---投稿詳細---</h1>
-<div class="user-post">
+<div class="top-container d-flex align-items-center justify-content-center bg-success">
+  <h2 class="content-title text-white font-weight-bolder">〜投稿詳細〜</h2>
+</div>
+<div class="post-content bg-light">
   <p><%= @post.user.username %> <%= @post.created_at.strftime('%Y/%m/%d %H:%M:%S') %></p>
-  <a class="post-title"><%= @post.title %></a>
+  <p class="font-weight-bolder"><%= @post.title %></p>
   <p><%= simple_format(h @post.content) %></p>
-
   <p id="post-<%= @post.id %>">
     <% if @post.liked_by?(current_user) %>
       <%= render "like", post: @post %>
@@ -15,26 +16,34 @@
 
   <!-- 投稿編集と削除 -->
   <% if current_user.id == @post.user_id %>
-    <p class="post-btn">
-      <%= link_to "編集", edit_post_path(@post), class:"post-edit" %>
-      <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" }, class:"delete" %>
+    <p class="d-flex justify-content-end">
+      <%= link_to "編集", edit_post_path(@post), class:"btn btn-outline-primary option-btn" %>
+      <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" }, class:"btn btn-outline-danger option-btn" %>
     </p>
   <% end %>
 </div>
-<p class="post-move"><%= link_to "投稿一覧へ", :back, class:"move-btn" %></p>
+<div class="d-flex justify-content-end">
+  <p class="back-box">
+    <%= link_to "投稿一覧へ", :back, type:"button", class:"page-post text-white btn btn-info" %>
+  </p>
+</div>
 
 <!-- コメント一覧 -->
 <% if user_signed_in? %>
   <div class="comment-create">
-    <h3 class="text-left">コメントを投稿する</h3>
+    <h4 class="comment-title font-weight-bolder">コメントを投稿する</h4>
     <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
   </div>
 <% end %>
 <hr>
-<h2 class="text-comments">コメント一覧</h2>
+<h4 class="text-comments">コメント一覧</h4>
 <div class="comments-area">
   <%= render partial: 'comments/index', locals: { comments: @comments } %>
 </div>
 
 
-<p class="post-move"><%= link_to "投稿一覧へ", :back, class:"move-btn" %></p>
+<div class="d-flex justify-content-end">
+  <p class="back-box">
+    <%= link_to "投稿一覧へ", :back, type:"button", class:"page-post text-white btn btn-info" %>
+  </p>
+</div>
