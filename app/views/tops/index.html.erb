@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="top-container d-flex align-items-center justify-content-center bg-success">
+  <div class="row top-container d-flex align-items-center justify-content-center bg-success">
     <h2 class="title text-white bg-info">おうち時間〜spendtime〜</h2>
   </div>
   <div class="message-title d-flex align-items-center justify-content-center"> 
@@ -9,21 +9,20 @@
     自宅での遊びや趣味を共有するコミュニティサイトです。<br>
     自宅での過ごし方をみんなで共有し楽しい時間を増やしましょう。
   </div>
-  <div class="acount-wrapper bg-success">
+  <div class="acount-wrapper">
     <div class="menu-wrapper d-flex align-items-center justify-content-center">
-      <h4 class="menu-select text-white" style="height:60px;">〜〜ご利用の方はこちら〜〜</h4>
+      <h4 class="menu-select text-success" style="height:60px;">〜〜ご利用の方はこちら〜〜</h4>
     </div>
-    <div class="row menu-select-btn d-flex align-items-center justify-content-center">
+    <div class="row bg-success menu-select-btn d-flex align-items-center justify-content-center">
       <% if user_signed_in? %>
       <%# ログイン済みの表示 %>
-        <%= link_to "投稿一覧ページ", posts_path, type:"button", class:"select-btn btn btn-info" %>
-        <%= link_to "新規投稿", new_post_path, type:"button", class:"select-btn btn btn-info" %>
+        <%= link_to "投稿一覧ページ", posts_path, type:"button", class:"select-btn btn btn-info col-sm" %><br>
+        <%= link_to "新規投稿", new_post_path, type:"button", class:"select-btn btn btn-info col-sm" %>
       <% else %>
         <%# 非ログイン時の表示 %>
-        <%= link_to "ログイン", new_user_session_path, type:"button", class:"select-btn btn btn-info col-3 col-md-3" %>
-        <%= link_to "新規登録", new_user_registration_path, type:"button", class:"select-btn btn btn-info col-3 col-md-3" %>
-        <div class="w-100"></div>
-        <%= link_to "ゲストログイン", users_guest_sign_in_path,method: :post, type:"button", class:"select-btn btn btn-info col-5 col-md-3" %>
+        <%= link_to "ログイン", new_user_session_path, type:"button", class:"select-btn btn btn-info col-sm-4" %><br>
+        <%= link_to "新規登録", new_user_registration_path, type:"button", class:"select-btn btn btn-info col-sm-4" %><br>
+        <%= link_to "ゲストログイン", users_guest_sign_in_path,method: :post, type:"button", class:"guest-btn select-btn btn btn-info col-sm-4" %>
       <% end %>
     </div>
   </div>
