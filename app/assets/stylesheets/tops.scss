@@ -12,15 +12,7 @@
 }
 
 .title-text {
-  text-shadow: 0px 2px 1px black;
-}
-
-.acount-wrapper {
-  box-shadow: 2px 2px 5px black;
-}
-
-.menu-wrapper {
-  padding-top: 40px;
+  text-shadow: 0px 1px 1px black;
 }
 
 .message-title {
@@ -32,15 +24,21 @@
 }
 
 .acount-wrapper {
-  height: 250px;
+  height: auto;
 }
 
 .menu-select {
-  text-shadow: 0px 2px 1px black;
+  text-shadow: 0px 1px 1px black;
 }
 
 .menu-select-btn {
-  height: 100px;
+  height: auto;
+  padding: 40px;
+  box-shadow: 2px 2px 5px black;
+}
+
+.guest-btn {
+  margin-top: 20px;
 }
 
 .mymenu-wrapper {
@@ -49,7 +47,7 @@
 }
 
 .select-btn {
-  text-shadow: 0px 2px 1px black;
+  text-shadow: 0px 1px 1px black;
   box-shadow: 2px 2px 5px black;
   margin-left: 5%;
   margin-right: 5%;
