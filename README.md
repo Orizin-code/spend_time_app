@@ -10,6 +10,9 @@
 「自宅での時間の過ごし方」を共有するコミュニティアプリです。
 - 記事の投稿・編集・削除機能
 - 投稿された内容へのいいね・コメント・編集機能
+- いいねした人の一覧ページ
+- 投稿された内容へのいいね・コメント・編集  
+- 投稿された内容へのいいね・コメント・編集機能
 - 記事のタイトルまたは内容の検索機能
 - 名前・パスワードのアカウント編集・アカウント削除機能（ゲストログイン時は編集・削除不可）
 - お問い合わせフォーム機能(非ログイン時でもお問い合わせ可)
@@ -56,7 +59,7 @@
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/postpage.png?raw=true)
 ![image](https://github.com/Orizin-code/spend_time_app/blob/master/public/readme_images/postlist.png?raw=true)
 - キーワード検索することで投稿の絞り込みができます。
-- Good!ボタンはいいね機能となります。
+- 「Goodボタン」はいいね機能となります。
 - 投稿された記事の詳細ボタンを押すと投稿詳細画面へ移動します。
 
 ## 投稿詳細画面
