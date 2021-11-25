@@ -16,13 +16,13 @@
     <div class="row bg-success menu-select-btn d-flex align-items-center justify-content-center">
       <% if user_signed_in? %>
       <%# ログイン済みの表示 %>
-        <%= link_to "投稿一覧ページ", posts_path, type:"button", class:"select-btn btn btn-info col-sm" %><br>
-        <%= link_to "新規投稿", new_post_path, type:"button", class:"select-btn btn btn-info col-sm" %>
+        <%= link_to "投稿一覧ページ", posts_path, class:"select-btn btn btn-info col-sm" %><br>
+        <%= link_to "新規投稿", new_post_path, class:"select-btn btn btn-info col-sm" %>
       <% else %>
         <%# 非ログイン時の表示 %>
-        <%= link_to "ログイン", new_user_session_path, type:"button", class:"select-btn btn btn-info col-sm-4" %><br>
-        <%= link_to "新規登録", new_user_registration_path, type:"button", class:"select-btn btn btn-info col-sm-4" %><br>
-        <%= link_to "ゲストログイン", users_guest_sign_in_path,method: :post, type:"button", class:"guest-btn select-btn btn btn-info col-sm-4" %>
+        <%= link_to "ログイン", new_user_session_path, class:"select-btn btn btn-info col-sm-4" %><br>
+        <%= link_to "新規登録", new_user_registration_path, class:"select-btn btn btn-info col-sm-4" %><br>
+        <%= link_to "ゲストログイン", users_guest_sign_in_path,method: :post, class:"guest-btn select-btn btn btn-info col-sm-4" %>
       <% end %>
     </div>
   </div>
