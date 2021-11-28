@@ -46,7 +46,7 @@
 ## 使用技術
 - 言語：Ruby (2.7.3)
 - フレームワーク：Ruby on Rails (6.1.4)
-- フロントエンド：HTML/CSS
+- フロントエンド：HTML/CSS/Javascript/Bootstrap (4.5.1)
 - テスト(Rspec/factory_bot)
 - DB：PostgreSQL
 - インフラ：Heroku(ステージング環境+本番環境)
